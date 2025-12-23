@@ -223,6 +223,10 @@ a {
   text-decoration:none;
 }
 
+.site-footer a {
+  color: #595959; /* or whatever color you want */
+  text-decoration: underline; /* optional */
+}
 
 a small {
   font-size:11px;
