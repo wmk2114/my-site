@@ -48,3 +48,27 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.3 }); // trigger when 30% visible
 
 videos.forEach(video => observer.observe(video));
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        // Ignore new tabs or modified clicks
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+        e.preventDefault();
+        const url = this.href;
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+          window.location.href = url;
+        }, 600); // must match CSS transition time
+      });
+    });
+  });
+</script>
+
+

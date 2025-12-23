@@ -33,6 +33,10 @@ body {
 
 }
 
+body.fade-out {
+  opacity: 0;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
@@ -350,11 +354,13 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
+  margin-top: 60px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #e0e0e0;
+  clear: both;
 }
 
 /* Lightbox overlay */
@@ -498,8 +504,6 @@ video {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
-
-
 
 @media print, screen and (max-width: 960px) {
 
