@@ -45,6 +45,14 @@ body.fade-out {
   color: #000;
 }
 
+.middle-content{
+    position: relative;
+    margin-inline: 0vh;
+    padding: 40px;
+    background: #fff; /* or transparent */
+    color: #000;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
@@ -426,7 +434,7 @@ footer {
 }
 
 .collage .img_res1 {
-  top: -45;
+  top:  100px;
   left: 30;
 }
 
