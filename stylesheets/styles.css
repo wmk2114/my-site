@@ -457,12 +457,16 @@ video {
 
 #fullscreenVideo {
   position: fixed;      /* stay in place */
-  top: 0;               /* align to top-left corner */
-  left: 0;
-  width: 100vw;         /* full viewport width */
-  height: 100vh;        /* full viewport height */
+  top: 0%;               /* align to top-left corner */
+  left: 0%;
+  width: 99vw;         /* full viewport width */
+  height: 99vh;        /* full viewport height */
   object-fit: cover;    /* scale and crop to cover entire screen */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* optional drop shadow */
   z-index: -1;          /* behind other content */
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
 }
 
 .overlay-text {
@@ -475,6 +479,26 @@ video {
   z-index: 1;
   font-family: "Bodoni 72", Times, serif;
 }
+
+.scroll-container {
+  width: 400px;           /* visible area */
+  overflow: hidden;        /* hide overflowing text */
+  border: 1px solid #ccc;  /* optional styling */
+  background-color: #f0f0f0;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;      /* prevent text from wrapping */
+  padding-left: 100%;       /* start off-screen right */
+  animation: scroll 10s linear infinite;  /* scroll effect */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 
 
 @media print, screen and (max-width: 960px) {

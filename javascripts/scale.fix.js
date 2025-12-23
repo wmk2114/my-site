@@ -16,3 +16,35 @@ function gestureStart() {
   }
 }
 
+const scrollTexts = document.querySelectorAll('.scroll-text');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // animate only once
+    }
+  });
+}, { threshold: 0.1 }); // trigger when 10% visible
+
+scrollTexts.forEach(text => observer.observe(text));
+
+
+const videos = document.querySelectorAll('.scroll-video');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+
+      // optional: autoplay video when visible
+      if (entry.target.tagName === 'VIDEO') {
+        entry.target.play();
+      }
+
+      observer.unobserve(entry.target); // animate only once
+    }
+  });
+}, { threshold: 0.3 }); // trigger when 30% visible
+
+videos.forEach(video => observer.observe(video));
