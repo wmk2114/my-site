@@ -37,6 +37,14 @@ body.fade-out {
   opacity: 0;
 }
 
+.below-content {
+  position: relative;
+  margin-top: 100vh; /* pushes content below the video */
+  padding: 40px;
+  background: #fff; /* or transparent */
+  color: #000;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
@@ -477,8 +485,8 @@ video {
 
 .overlay-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25vw;
+  left: 50vw;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
