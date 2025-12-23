@@ -80,6 +80,40 @@ h1::hover {
   z-index: 10;                      /* bring hovered image to front */
 }
 
+.image-container {
+  position: relative;
+  display: inline-block; /* so caption overlays image */
+}
+
+.image-container img {
+  display: block;
+  width: 300px; /* set your image size */
+  transition: transform 0.3s; /* optional: slight zoom on hover */
+}
+
+.image-container .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: none;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* optional zoom */
+}
+
+.image-container:hover .caption {
+  opacity: 1; /* show caption on hover */
+}
+
+
 @keyframes underlineGrow {
   from {
     transform: scaleX(0);  /* start fully hidden */
