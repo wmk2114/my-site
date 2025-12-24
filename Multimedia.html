@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Multimedia</title>
+
+    <link rel="stylesheet" href="stylesheets/Multimedia_Styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+        <div class="menu">
+                 <a href="main.html">
+                   <h1>About Me</h1>
+                 </a>
+                 <a href="Research.html">
+                    <h1>Research</h1>
+                 </a>
+      <a href="pdfs/WyattKingCV.pdf">
+      <h1>CV</h1>
+      </a>
+      </div>
+      <h2 style="top: 200px; left: 800px; font-weight: 300px;">
+        Photography
+      </h2>
+      
+      <div class="collage">
+        <div class="image-container">
+          <a href="images/Protest7.jpg">
+            <img src="images/Protest7.jpg" alt="Protest7" class="img1" >
+            </a>
+        </div>
+        <div class="image-container">
+          <a href="images/KraftCenter.jpg">
+            <img src= "images/KraftCenter.jpg" alt="Protest5" class="img2">
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="images/Protest1.jpg">
+            <img src= "images/Protest1.jpg" alt="Protest1" class="img3">
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="images/AAUP_presser.jpg">
+            <img src="images/AAUP_presser.jpg" alt="AAUP Presser" class="img4">
+            </a>
+            </div>
+        <div class="image-container">
+        <a href="images/MilsteinSweep.jpg">
+          <img src="images/MilsteinSweep.jpg" alt="Protest" class="img5">
+          </a>
+          </div>
+                <div class="image-container">
+        <a href="images/ButlerSweep.jpg">
+          <img src="images/ButlerSweep.jpg" alt="Protest" class="img6">
+          </a>
+          </div>
+          <script>
+                // Select all images in .image-container
+    const images = document.querySelectorAll('.image-container img');
+
+    // Function to check if image is in viewport
+    function checkImages() {
+      const triggerBottom = window.innerHeight * 0.9; // trigger slightly before fully visible
+
+      images.forEach(img => {
+        const imgTop = img.getBoundingClientRect().top;
+
+        if (imgTop < triggerBottom) {
+          img.classList.add('fade-in');
+        }
+      });
+    }
+
+    // Run on scroll and on page load
+    window.addEventListener('scroll', checkImages);
+    window.addEventListener('load', checkImages);
+          </script>
+  </body>
+  </html>
