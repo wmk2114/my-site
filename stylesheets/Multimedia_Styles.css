@@ -337,7 +337,29 @@ footer {
 
 /* IMAGES */
 
-.collage img {
+video {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.75s ease-out forwards;
+}
+
+.collage img  {
+  position: absolute;           /* your original placement */
+  width: 300px;                 /* default size */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transform-origin: top left;   /* scaling behaves predictably */
+
+  /* fade-in setup */
+  opacity: 0;
+  /* combine scale with translateY using a variable */
+  transform: scale(var(--base-scale, 1));
+  transition: opacity .65s ease-out, transform .65s ease-out;
+}
+
+
+.collage video{
   position: absolute;           /* your original placement */
   width: 300px;                 /* default size */
   height: auto;
@@ -357,16 +379,6 @@ footer {
   transform: scale(var(--base-scale, 1)) translateY(0);
 }
 
-
-.collage video{
-  position: absolute;           /* REQUIRED for manual placement */
-  width: 300px;                 /* default size */
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transform-origin: top left;   /* scaling behaves predictably */
-}
-
 .img1 { --base-scale: 1.45; top: 410px; left: 520px; 
 transform: scale(var(--base-scale)); aspect-ratio: 3/2; 
 object-fit: cover; transition: transform 0.3s ease; }
@@ -377,18 +389,21 @@ object-fit: cover; transition: transform 0.3s ease; }
 .img4 {--base-scale: 1.5; top: 725px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
 .img5 {--base-scale: 1.45; top: 725px; left: 520px;transform: scale(var(--base-scale)); aspect-ratio: 3/4; object-fit: cover; transition: transform 0.3s ease;}
 .img6 {--base-scale: 1.5; top: 1035px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
-
-
+.img7 {--base-scale: 1.45; top: 1320px; left: 520px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
+.video8 {--base-scale: 1; top: 1350px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
 /* On hover, add 0.05 to the base scale */
 
 .image-container:hover img {
   transform: scale(calc(var(--base-scale) + 0.05));
 }
 
-video {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.75s ease-out forwards;
+.video-container:hover video {
+  transform: scale(calc(var(--base-scale) + 0.05));
+}
+
+.collage video.fade-in {
+  opacity: 1;
+  transform: scale(var(--base-scale, 1)) translateY(0);
 }
 
 @keyframes fadeUp {
