@@ -37,7 +37,6 @@
   width: 100%;
 }
 
-
 body {
   background-color: #fff;
   padding: 50px;
@@ -58,24 +57,8 @@ body.fade-out {
   opacity: 0;
 }
 
-.below-content {
-  position: relative;
-  margin-top: 100vh; /* pushes content below the video */
-  padding: 40px;
-  background: #fff; /* or transparent */
-  color: #000;
-}
 
-.middle-content{
-    position: relative;
-    margin-inline: 0vh;
-    padding: 40px;
-    background: #fff; /* or transparent */
-    color: #000;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
   
@@ -90,7 +73,7 @@ p, ul, ol, table, pre, dl {
   margin:0 0 20px;
 }
 
-h1, h2, h3 {
+h1, h3 {
   line-height:1.1;
 }
 
@@ -121,40 +104,6 @@ h1::hover {
   z-index: 10;                      /* bring hovered image to front */
 }
 
-.image-container {
-  position: relative;
-  display: inline-block; /* so caption overlays image */
-}
-
-.image-container img {
-  display: block;
-  width: 300px; /* set your image size */
-  transition: transform 0.3s; /* optional: slight zoom on hover */
-}
-
-.image-container .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: none;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 12px;
-}
-
-.image-container:hover img {
-  transform: scale(1.05); /* optional zoom */
-}
-
-.image-container:hover .caption {
-  opacity: 1; /* show caption on hover */
-}
-
-
 @keyframes underlineGrow {
   from {
     transform: scaleX(0);  /* start fully hidden */
@@ -167,13 +116,15 @@ h1::hover {
 h2 {
   font-family: "Bodoni 72", Times, serif;
   font-size: 100px;
-  font-weight: 300px;             /* remove 'px', font-weight is just a number */
+  font-weight: 300;
   color: #222;
   line-height: 1.1;
-  display: inline-block;        /* keeps the box tight around text */
-  padding: 10px 20px;           /* space inside the box */
-  border-radius: 0px;           /* optional: rounded corners */
+
+  position: absolute;           /* ← KEY FIX */
+  display: inline-block;
+  transform: rotate(90deg);
 }
+
 
 h4 {
   font-family: "Bodoni 72", Times, serif;
@@ -234,31 +185,6 @@ h3, h5, h6 {
   transition: transform 0.3s ease;
 }
 
-.highlight-link2 {
-  color: #494949;
-  text-decoration: underline;   /* underline on baseline */
-  text-decoration-color: transparent; /* hide default line */
-  position: relative;
-}
-
-.highlight-link2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;              /* exactly at text baseline */
-  height: 2px;
-  width: 100%;
-  background-color: #494949;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.highlight-link2:hover::after {
-  transform: scaleX(1);
-}
-
-
 .highlight-link:hover::after {
   transform: scaleX(1);    /* grow underline on hover */
 }
@@ -270,6 +196,7 @@ a {
 }
 
 .site-footer a {
+  margin-top: 600px;
   color: #595959; /* or whatever color you want */
   text-decoration: underline; /* optional */
 }
@@ -420,8 +347,8 @@ hr {
 }
 
 footer {
-  margin-top: 30px;
-  padding: 10px;
+  margin-top: 60px;
+  padding: 20px 0;
   text-align: center;
   font-size: 14px;
   color: #666;
@@ -429,95 +356,97 @@ footer {
   clear: both;
 }
 
-/* Lightbox overlay */
-.lightbox {
-  display: none; 
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Image inside lightbox */
-.lightbox-content {
-  margin: 5% auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 10px;
-}
-
-/* Close button */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.collage img {
-  position: static;
-  width: 300px;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
-}
-
-.collage img:hover {
-  transform: scale(1.05);          /* slightly larger */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* stronger shadow on hover */
-  z-index: 10;                      /* bring hovered image to front */
-}
-
-
-.collage .img1 {
-  top: -45;
-  left: 0;
-}
-
-.collage .img_res1 {
-  top:  100px;
-  left: 30;
-}
-
-.collage .img2 {
-  top: 180px;
-  left: -50px;
-}
-
-.collage .img4 {
-  top: 520px;
-  left: -50px;
-}
-
-
-.collage .img3 {
-  top: 340px;
-  left: 35px;
-}
-
-.collage .img5 {
-  top: 700px;
-  left: 35px;
-}
-
-.collage .img6 {
-  top: 900px;
-  left: -65px;
-}
+/* IMAGES */
 
 video {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.75s ease-out forwards;
+}
+
+.collage img  {
+  position: absolute;           /* your original placement */
+  width: 300px;                 /* default size */
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transform-origin: top left;   /* scaling behaves predictably */
+
+  /* fade-in setup */
+  opacity: 0;
+  /* combine scale with translateY using a variable */
+  transform: scale(var(--base-scale, 1));
+  transition: opacity .65s ease-out, transform .65s ease-out;
+}
+
+
+.collage video{
+  position: absolute;           /* your original placement */
+  width: 300px;                 /* default size */
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transform-origin: top left;   /* scaling behaves predictably */
+
+  /* fade-in setup */
+  opacity: 0;
+  /* combine scale with translateY using a variable */
+  transform: scale(var(--base-scale, 1));
+  transition: opacity .65s ease-out, transform .65s ease-out;
+}
+
+.collage img.fade-in {
+  opacity: 1;
+  transform: scale(var(--base-scale, 1)) translateY(0);
+}
+
+.img1 { --base-scale: 1.3; top: 365px; left: 700px; 
+transform: scale(var(--base-scale)); aspect-ratio: 3/2; 
+object-fit: cover; transition: transform 0.3s ease; }
+
+.img3 {--base-scale: 1.3; top: 100px; left: 700px;transform: scale(var(--base-scale)); 
+aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
+
+.img2 { --base-scale: 1.3; top: 100px; left: 305px; 
+transform: scale(var(--base-scale)); aspect-ratio: 3/4.04; 
+object-fit: cover; transition: transform 0.3s ease; }
+
+.img4 {--base-scale: 1.3; top: 630px; left: 305px;transform: scale(var(--base-scale)); 
+aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
+
+.img5 {--base-scale: 1.3; top: 630px; left: 700px;transform: scale(var(--base-scale)); 
+aspect-ratio: 4.02/5.64; object-fit: cover; transition: transform 0.3s ease;}
+
+.img6 {--base-scale: 1.3; top: 900px; left: 305px;transform: scale(var(--base-scale)); 
+aspect-ratio: 3/2.13; object-fit: cover; transition: transform 0.3s ease;}
+
+.img7 {--base-scale: 1.3; top: 1320px; left: 620px;transform: scale(var(--base-scale)); aspect-ratio: 
+3/2; object-fit: cover; transition: transform 0.3s ease;}
+
+.img8 {--base-scale: 0.85; top: 1185px; left: 305px;transform: scale(var(--base-scale)); 
+aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+
+.img9 {--base-scale: 0.85; top: 1185px; left: 575px;transform: scale(var(--base-scale)); 
+aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+
+.img10 {--base-scale: 0.85; top: 1185px; left: 838px;transform: scale(var(--base-scale)); 
+aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+
+.img11 {--base-scale: 1.5; top: 1650px; left: 305px;transform: scale(var(--base-scale)); 
+aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
+/* On hover, add 0.05 to the base scale */
+
+.image-container:hover img {
+  transform: scale(calc(var(--base-scale) + 0.05));
+}
+
+.video-container:hover video {
+  transform: scale(calc(var(--base-scale) + 0.05));
+}
+
+.collage video.fade-in {
+  opacity: 1;
+  transform: scale(var(--base-scale, 1)) translateY(0);
 }
 
 @keyframes fadeUp {

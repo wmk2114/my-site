@@ -176,6 +176,7 @@ a {
 }
 
 .site-footer a {
+  margin-top: 600px;
   color: #595959; /* or whatever color you want */
   text-decoration: underline; /* optional */
 }
@@ -387,10 +388,13 @@ transform: scale(var(--base-scale)); aspect-ratio: 3/4;
 object-fit: cover; transition: transform 0.3s ease; }
 .img3 {--base-scale: 1.45; top: 100px; left: 520px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
 .img4 {--base-scale: 1.5; top: 725px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
-.img5 {--base-scale: 1.45; top: 725px; left: 520px;transform: scale(var(--base-scale)); aspect-ratio: 3/4; object-fit: cover; transition: transform 0.3s ease;}
+.img5 {--base-scale: 1.45; top: 725px; left: 520px;transform: scale(var(--base-scale)); aspect-ratio: 4.02/5.64; object-fit: cover; transition: transform 0.3s ease;}
 .img6 {--base-scale: 1.5; top: 1035px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
 .img7 {--base-scale: 1.45; top: 1320px; left: 520px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
-.video8 {--base-scale: 1; top: 1350px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+.img8 {--base-scale: 0.95; top: 1350px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+.img9 {--base-scale: 0.95; top: 1350px; left: 365px;transform: scale(var(--base-scale)); aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+.img10 {--base-scale: 0.95; top: 1350px; left: 670px;transform: scale(var(--base-scale)); aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+.img11 {--base-scale: 2.0; top: 1875px; left: 50px;transform: scale(var(--base-scale)); aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
 /* On hover, add 0.05 to the base scale */
 
 .image-container:hover img {
