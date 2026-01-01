@@ -434,6 +434,12 @@ aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
 
 .img11 {--base-scale: 1.5; top: 1650px; left: 305px;transform: scale(var(--base-scale)); 
 aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
+
+.img12 {--base-scale: 1.06; top: 1650px; left: 775px;transform: scale(var(--base-scale)); 
+aspect-ratio: 9/16; object-fit: cover; transition: transform 0.3s ease;}
+
+.img13 {--base-scale: 1.5; top: 1960px; left: 305px;transform: scale(var(--base-scale)); 
+aspect-ratio: 16/9; object-fit: cover; transition: transform 0.3s ease;}
 /* On hover, add 0.05 to the base scale */
 
 .image-container:hover img {
