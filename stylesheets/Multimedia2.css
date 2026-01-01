@@ -368,7 +368,7 @@ video {
   position: absolute;           /* your original placement */
   width: 300px;                 /* default size */
   height: auto;
-  border-radius: 0px;
+  border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transform-origin: top left;   /* scaling behaves predictably */
 
@@ -376,7 +376,7 @@ video {
   opacity: 0;
   /* combine scale with translateY using a variable */
   transform: scale(var(--base-scale, 1));
-  transition: opacity .65s ease-out, transform .65s ease-out;
+  transition: opacity .5s ease-out, transform .5s ease-out;
 }
 
 
@@ -392,7 +392,7 @@ video {
   opacity: 0;
   /* combine scale with translateY using a variable */
   transform: scale(var(--base-scale, 1));
-  transition: opacity .65s ease-out, transform .65s ease-out;
+  transition: opacity .35s ease-out, transform .35s ease-out;
 }
 
 .collage img.fade-in {
@@ -438,6 +438,7 @@ aspect-ratio: 3/2; object-fit: cover; transition: transform 0.3s ease;}
 
 .image-container:hover img {
   transform: scale(calc(var(--base-scale) + 0.05));
+  z-index: 1;
 }
 
 .video-container:hover video {
