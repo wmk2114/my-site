@@ -16,6 +16,11 @@
   text-decoration-color: white; /* chalk color */
 }
 
+.highlight-link6 {
+  color: #595959;
+  font-weight: 800;
+}
+
 .menu {
   display: flex;
   justify-content: left; /* centers the items horizontally */
@@ -479,6 +484,13 @@ footer {
   left: 0;
 }
 
+.collage .img71{
+  width: 300px;              /* pick your size */
+  aspect-ratio: 1 / 1.4;       /* square, change as needed */
+  object-fit: cover;         /* crops instead of stretching */
+  object-position: center;   /* adjust focal point if needed */
+}
+
 .collage .img_res1 {
   top:  100px;
   left: 30;
@@ -535,6 +547,14 @@ video {
   z-index: -1;          /* behind other content */
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
+}
+
+.signature {
+  margin-top: 10px;
+  font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-size: 2.2rem;
+  color: #595959;
+  transform: rotate(-3deg); /* slight tilt for handwritten feel */
 }
 
 .overlay-text {
