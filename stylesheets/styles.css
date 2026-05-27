@@ -484,11 +484,11 @@ footer {
   left: 0;
 }
 
-.collage .img71{
-  width: 300px;              /* pick your size */
-  aspect-ratio: 1 / 1.4;       /* square, change as needed */
-  object-fit: cover;         /* crops instead of stretching */
-  object-position: center;   /* adjust focal point if needed */
+.collage .img71 {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.4;
+  object-fit: cover;
 }
 
 .collage .img_res1 {
@@ -652,6 +652,26 @@ video {
 
   pre, code {
     word-wrap:normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    padding: 1rem;
+  }
+  .collage {
+    display: block;
+    width: 100%;
+  }
+  .image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 }
 
