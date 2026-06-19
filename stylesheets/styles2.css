@@ -11,7 +11,7 @@
   --bg:         #fafaf8;
   --rule:       #004225;
   --ff-serif:   "Righteous", serif;
-  --ff-sans:    "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  --ff-sans:    "Oswald", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
   --max-w:      1080px;
   --pad-x:      48px;
 }
@@ -176,7 +176,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .about-body p {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.8;
   font-weight: 400;
   color: var(--ink-mid);
@@ -245,6 +245,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.5;
   color: var(--ink-mid);
 }
+
 
 /* ── Footer ── */
 .site-footer {

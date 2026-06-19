@@ -1,0 +1,124 @@
+% !TEX program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, letterpaper]{article}
+
+% -------------------------------------------------------
+% PACKAGES
+% -------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{librebaskerville}
+\usepackage[margin=0.85in, top=0.75in, bottom=0.75in]{geometry}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[hidelinks, colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+
+% -------------------------------------------------------
+% TYPOGRAPHY & SPACING
+% -------------------------------------------------------
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+% Section heading style: bold, small-caps label, full-width rule
+\titleformat{\section}
+  {\large\bfseries\scshape}
+  {}
+  {0pt}
+  {}
+  [\vspace{2pt}\titlerule\vspace{2pt}]
+
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+% -------------------------------------------------------
+% CUSTOM COMMANDS
+% -------------------------------------------------------
+
+% Role + date line
+\newcommand{\role}[2]{%
+  \textbf{#1} \hfill \textit{#2}%
+}
+
+% Employer heading
+\newcommand{\employer}[1]{%
+  \textbf{\large #1}%
+}
+
+% -------------------------------------------------------
+\begin{document}
+
+% -------------------------------------------------------
+% HEADER
+% -------------------------------------------------------
+\noindent\rule{36pt}{2.5pt}\\[6pt]
+{\LARGE\bfseries Wyatt King}\\[4pt]
+\small\href{mailto:wmk2114@columbia.edu}{wmk2114@columbia.edu}
+\enspace\textperiodcentered\enspace
+\href{https://wmk2114.github.io/my-site/main.html}{Website}
+\enspace\textperiodcentered\enspace
+\href{https://www.linkedin.com/in/wyatt-king-790955263/}{LinkedIn}
+\normalsize
+
+\vspace{6pt}
+
+% -------------------------------------------------------
+\section*{Education}
+
+\role{Columbia University, Columbia College}{New York, NY \hspace{2pt} May 2026}\\
+BA -- Joint Major in Political Science \& Statistics \hfill GPA: 4.03
+
+\vspace{3pt}
+\textit{Selected Coursework:} Senior Honors Seminar; Theories of War and Peace (PhD Seminar); American Foreign Policy; Indian Foreign Policy; Quantitative Political Research I \& II; Applied Linear Regression; Applied Bayesian Methods; Applied Machine Learning.
+
+\vspace{3pt}
+\textit{Honors:} Phi Beta Kappa; Magna cum Laude; Charles A. Beard Prize (best paper in political science, 2026); Saltzman Institute of War and Peace Student Scholar; Departmental Honors; Dean's List (all semesters); Pi Sigma Alpha.
+
+% -------------------------------------------------------
+\section*{Work Experience}
+
+\employer{NBC News}\\
+\role{Editorial and Production Intern}{September 2024\,--\,April 2025}\\
+At \textit{Top Story with Tom Llamas}, I wrote anchor tells, sourced video content from wire services and social media, and edited short news segments. I researched news packages for producers, assisting on stories ranging from M23's encirclement of Goma to South Korea's martial law crisis.
+
+\vspace{4pt}
+\employer{Columbia Daily Spectator}\\
+\role{Video Journalist}{September 2022\,--\,December 2024}\\
+I led a team of 12 student journalists through the process of researching, writing, and producing videos for the \textit{Spectator}'s social platforms. During my time on staff, I covered the Columbia protests, including the encampment, occupation of Hamilton Hall, and the related arrests. Videos I produced, wrote, and edited have been viewed over 1.5 million times across Instagram, YouTube, and TikTok, and my reporting has been cited in national media outlets, including \textit{The New York Times}.
+
+\vspace{4pt}
+\employer{PEN America}\\
+\role{Free Expression Leadership Fellow}{May 2024\,--\,August 2024}\\
+Working with PEN's Digital Safety team, I researched, copy edited, and fact-checked a report on how natural language processing can be leveraged to better protect journalists and writers from identity-based hate, harassment, and intimidation online. I assisted the team as they offered anti-harassment training to professional newsrooms and advocated for social media companies to adopt policies that better protect journalists from threats of violence.
+
+\vspace{4pt}
+\employer{William Pitt Sotheby's International Realty}\\
+\role{Data Analysis Intern}{May 2023\,--\,August 2023}\\
+Using data retrieved from the Multiple Listings Service, public tax records, and web scraping, I created databases for real estate agents that bolstered their ability to advertise properties, evaluate local markets, and understand client retention. I used R and Python to automate processes that were previously done manually, helping to get agents and office managers out from behind their computer screens and back to working with clients.
+
+% -------------------------------------------------------
+\section*{Research}
+
+\textbf{Senior Thesis} \hfill \textit{September 2025\,--\,April 2026}\\
+I conducted a survey experiment using Qualtrics and Prolific to test how identity-based arguments and knowledge of India's no-first-use policy alter support for a hypothetical nuclear first strike. The project entailed writing survey instruments, constructing composite indices using inverse covariance weighting and principal component analysis, and running regression and interaction-effects models to analyze treatment heterogeneity. My thesis was awarded the Charles A.\,Beard Prize as the best paper in Columbia's political science department for the 2025--26 academic year. The final paper is available \href{https://wmk2114.github.io/my-site/pdfs/Senior%20Thesis%20Wyatt%20King.pdf}{here}.
+
+% -------------------------------------------------------
+\section*{Skills}
+
+\begin{tabular}{@{}ll}
+  \textbf{Programming}  & R, SAS, Excel, \LaTeX, HTML \\[2pt]
+  \textbf{Tools}        & GitHub, Qualtrics, Prolific, Amazon MTurk \\[2pt]
+  \textbf{Multimedia \& News} & Adobe Premiere Pro, After Effects, Lightroom, iNews \\[2pt]
+  \textbf{Languages}    & English (native), French (limited working proficiency) \\
+\end{tabular} \\
+% -------------------------------------------------------
+\section*{Hobbies \& Interests}
+Running, reading (ask me about \textit{Moby Dick}), photography, longing for Acadia and the White Mountains.
+
+% -------------------------------------------------------
+
+\textit{Updated: May 2026}
+
+\end{document}
