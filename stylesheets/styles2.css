@@ -11,7 +11,7 @@
   --bg:         #fafaf8;
   --rule:       #004225;
   --ff-serif:   "Righteous", serif;
-  --ff-sans:    "Oswald", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  --ff-sans:    "SF Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
   --max-w:      1080px;
   --pad-x:      48px;
 }
