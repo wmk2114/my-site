@@ -100,6 +100,12 @@
       }
       .fact-button:hover { text-decoration-color: var(--link); }
       .fact-button:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+      .fact-question {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
       .fact {
         margin: 0;
         font-style: italic;
@@ -198,8 +204,12 @@
         var out = document.getElementById("fact");
 
         function show(i) {
+          // The question stays, smaller and no longer clickable, right above the answer
+          var question = document.createElement("span");
+          question.className = "fact-question";
+          question.textContent = button.textContent;
+          button.replaceWith(question);
           out.innerHTML = facts[i];
-          button.hidden = true;
         }
 
         // One fun fact per visitor: remember it so a refresh doesn't reroll.
