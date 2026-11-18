@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC4V03VJMX"></script>
     <script>
@@ -9,91 +9,223 @@
       gtag('config', 'G-SC4V03VJMX');
     </script>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wyatt King</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Roboto+Mono:wght@300;400;500&family=Changa+One:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Spicy+Rice&display=swap&family=Oswald:wght@200..700&display=swap&family=Fjalla+One&family=Oswald:wght@200..700&display=swap&family=Instrument+Serif:ital@0;1&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/styles2.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="wi dth=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #f4f2ea;
+        --text: #1f3a2c;
+        --muted: #6f8176;
+        --line: #d8d8ca;
+        --link: #1f4d36;
+        --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      html { background: var(--bg); }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: left;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        text-decoration-color: var(--line);
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color 0.2s;
+      }
+      a:hover { text-decoration-color: var(--link); }
+      a:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+
+      /* ── Single centered column, left-aligned text ── */
+      main {
+        max-width: 30rem;
+        margin: 0 auto;
+        padding: clamp(3rem, 10vh, 6.5rem) 1.5rem 3rem;
+      }
+
+
+      h1 {
+        margin: 0;
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: clamp(1.5rem, 4vw, 1.85rem);
+        line-height: 1.25;
+        letter-spacing: -0.005em;
+        text-wrap: balance;
+      }
+
+      .hero-tagline {
+        margin: 0.6rem 0 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .about-body {
+        margin-top: 2.75rem;
+      }
+      .about-body p { margin: 0 0 1.5rem; text-wrap: pretty; }
+
+      .fun-fact {
+        margin-top: 2.25rem;
+      }
+      .fact-button {
+        padding: 0;
+        border: 0;
+        background: none;
+        font: inherit;
+        color: var(--link);
+        text-decoration: underline;
+        text-decoration-color: var(--line);
+        text-underline-offset: 0.25em;
+        cursor: pointer;
+        transition: text-decoration-color 0.2s;
+      }
+      .fact-button:hover { text-decoration-color: var(--link); }
+      .fact-button:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+      .fact-question {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .fact {
+        margin: 0;
+        font-style: italic;
+        text-wrap: pretty;
+      }
+      .fact:empty { display: none; }
+
+      .about-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 2rem;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .updated {
+        margin: 0.15rem 0 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.4;
+        opacity: 0.8;
+      }
+      .updated .meta-label { margin-right: 0.35em; }
+
+      .site-footer {
+        max-width: 30rem;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .site-footer p { margin: 0; }
+    </style>
   </head>
   <body>
 
-    <!-- ── Top nav ── -->
-    <nav class="top-nav">
-      <span class="nav-name">Wyatt King</span>
-      <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="pdfs/WyattKingCV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-      </div>
-    </nav>
+    <main>
+      <header>
+        <h1>Hi! I'm Wyatt, and I'm interested in the social sciences.</h1>
+        <p class="hero-tagline">Research &amp; Sample Strategy @ <a href="https://morningconsult.com">Morning Consult</a></p>
+      </header>
 
-    <!-- ── Hero ── -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1 class="hero-name">Hi! I'm Wyatt, and I'm interested in the social sciences.</h1>
-        <p class="hero-tagline">Research & Sample Strategy @ Morning Consult</p>
-      </div>
-      <div class="hero-img-wrap">
-        <img src="images/PANA1179 3.jpg" alt="Wyatt King" class="hero-img">
-      </div>
-    </section>
+      <section class="about-body">
+        <p>
+          I recently joined Morning Consult, where I work as an associate on its research and sample strategy team.
+        </p>
 
-    <!-- ── About ── -->
-    <section class="about-section">
-      <div class="about-inner">
-        <div class="about-body">
+        <p>
+          In May, I graduated Phi Beta Kappa and Magna cum Laude from Columbia University, where I studied international relations and statistics
+          and covered the 2024 pro-Palestine protests as a <a href="Multimedia.html">photo and video journalist</a>. My extracurriculars and internships spanned
+          journalism, free speech advocacy, and data analytics—having worked at NBC News and PEN America, among other organizations.
+        </p>
 
-          <p>
-            I recently graduated Phi Beta Kappa and Magna cum Laude from Columbia University, where I studied international relations and statistics
-            and covered the 2024 pro-Palestine protests as a photo and video journalist. My professional experience spans
-            journalism, free speech advocacy, and data analytics—having worked at NBC News and PEN America, among other organizations.
-            In July, I'll start as an associate at Morning Consult, working on its research and sample strategy team.
-          </p>
-          <p>
-            Academically, I am interested in nuclear non-use, public opinion research, and epistemology in the social sciences more broadly.
-            For my senior thesis, I conducted an online survey experiment evaluating the Indian public's attitudes toward nuclear weapons use.
-            I was awarded the <strong>Charles A. Beard Prize</strong> for the project, given to the student who writes the best paper in Columbia's political science department.
-          </p>
-           <p>
-            One of my hobbies is reading, and I'm always on the hunt for new recommendations. I'm not sure how to describe my book taste, but my favorite authors are Kazuo Ishiguro,
-            Herman Melville, and Virginia Woolf. Right now, I'm into reading history and political theory, with a focus on liberalism, utilitarianism, and their critics (plus nuclear weapons).
-            Please feel free to reach out if you know what I should read next!
-          </p>
-          <div class="about-links">
-            <a href="pdfs/Senior Thesis Wyatt King.pdf" class="pill-link">Read my research →</a>
-            <a href="https://www.linkedin.com/in/wyatt-king-790955263/" class="pill-link">LinkedIn →</a>
-          </div>
+        <p>
+          Academically, I am interested in nuclear non-use, public opinion research, and epistemology in the social sciences more broadly.
+          For my senior thesis, I conducted an online survey experiment evaluating the Indian public's attitudes toward nuclear weapons use.
+          I was awarded the Charles A. Beard Prize for the project, given to the student who writes the best paper in Columbia's political science department.
+        </p>
+
+        <p>
+          One of my hobbies is reading, and I'm always on the hunt for new recommendations. I'm not sure how to describe my book taste, but my favorite authors are Kazuo Ishiguro,
+          Herman Melville, and Virginia Woolf. Right now, I'm into reading history and political theory, with a focus on liberalism, utilitarianism, and their critics (plus nuclear weapons).
+          Please reach out if you know what I should read next!
+        </p>
+
+        <div class="fun-fact">
+          <button type="button" class="fact-button" id="fact-button">What's a fun fact about me?</button>
+          <p class="fact" id="fact" aria-live="polite"></p>
         </div>
-        <div class="about-meta">
-          <div class="meta-block">
-            <span class="meta-label">Education</span>
-            <span class="meta-value">Columbia University, B.A. 2026<br>International Relations & Statistics (joint major)</span>
-          </div>
-          <div class="meta-block">
-            <span class="meta-label">Experience</span>
-            <span class="meta-value">NBC News · PEN America · Columbia Daily Spectator · Sotheby's International Realty</span>
-          </div>
-          <div class="meta-block">
-            <span class="meta-label">Awards</span>
-            <span class="meta-value">Charles A. Beard Prize  · Phi Beta Kappa  · Magna cum Laude ·  Pi Sigma Alpha ·
-            Departmental Honors · Society of Professional Journalists' National Mark of Excellence (News Videography)</span>
-          </div>
-          <div class="meta-block">
-            <span class="meta-label">Updated</span>
-            <span class="meta-value">June 2026</span>
-          </div>
+
+        <div class="about-links">
+          <a href="pdfs/WyattKingCV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="https://www.linkedin.com/in/wyatt-king-790955263/">LinkedIn →</a>
+          <a href="pdfs/Senior Thesis Wyatt King.pdf">Read my research →</a>
         </div>
-      </div>
-    </section>
 
+      </section>
+    </main>
 
-    <!-- ── Footer ── -->
     <footer class="site-footer">
-      <p>© 2026 Wyatt King</a></p>
+      <p>© 2026 Wyatt King</p>
+      <p class="updated"><span class="meta-label">Updated</span><span class="meta-value">November 2026</span></p>
     </footer>
 
-    <script src="javascripts/scale.fix.js"></script>
+    <script>
+      (function () {
+        var facts = [
+          'I grew up in <a href="https://en.wikipedia.org/wiki/Washington,_Connecticut" target="_blank" rel="noopener noreferrer">the town Gilmore Girls was based on</a>.',
+          "I can juggle two apples with one hand.",
+          "I can snap without using my thumbs.",
+          'I created a <a href="https://wmk2114.github.io/Crush-Calculator/" target="_blank" rel="noopener noreferrer">Crush Calculator</a> with my friend.'
+        ];
+        var KEY = "wk-fun-fact";
+        var button = document.getElementById("fact-button");
+        var out = document.getElementById("fact");
+
+        function show(i) {
+          // The question stays, smaller and no longer clickable, right above the answer
+          var question = document.createElement("span");
+          question.className = "fact-question";
+          question.textContent = button.textContent;
+          button.replaceWith(question);
+          out.innerHTML = facts[i];
+        }
+
+        // One fun fact per visitor: remember it so a refresh doesn't reroll.
+        var saved = null;
+        try { saved = window.localStorage.getItem(KEY); } catch (e) {}
+        if (saved !== null && facts[Number(saved)]) {
+          show(Number(saved));
+          return;
+        }
+
+        button.addEventListener("click", function () {
+          var i = Math.floor(Math.random() * facts.length);
+          try { window.localStorage.setItem(KEY, String(i)); } catch (e) {}
+          show(i);
+        });
+      })();
+    </script>
   </body>
 </html>
