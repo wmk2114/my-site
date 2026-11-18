@@ -83,6 +83,30 @@
       }
       .about-body p { margin: 0 0 1.5rem; text-wrap: pretty; }
 
+      .fun-fact {
+        margin-top: 2.25rem;
+      }
+      .fact-button {
+        padding: 0;
+        border: 0;
+        background: none;
+        font: inherit;
+        color: var(--link);
+        text-decoration: underline;
+        text-decoration-color: var(--line);
+        text-underline-offset: 0.25em;
+        cursor: pointer;
+        transition: text-decoration-color 0.2s;
+      }
+      .fact-button:hover { text-decoration-color: var(--link); }
+      .fact-button:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+      .fact {
+        margin: 0;
+        font-style: italic;
+        text-wrap: pretty;
+      }
+      .fact:empty { display: none; }
+
       .about-links {
         display: flex;
         flex-wrap: wrap;
@@ -121,13 +145,19 @@
 
       <section class="about-body">
         <p>
-          In July, I joined Morning Consult, where I work as an associate on its research and sample strategy team. There, I field surveys and think about how we can execute them better.
+          I recently joined Morning Consult, where I work as an associate on its research and sample strategy team.
         </p>
-        
+
         <p>
           In May, I graduated Phi Beta Kappa and Magna cum Laude from Columbia University, where I studied international relations and statistics
-          and covered the 2024 pro-Palestine protests as a photo and video journalist</a>. My extracurriculars and internships spanned
+          and covered the 2024 pro-Palestine protests as a <a href="Multimedia.html">photo and video journalist</a>. My extracurriculars and internships spanned
           journalism, free speech advocacy, and data analytics—having worked at NBC News and PEN America, among other organizations.
+        </p>
+
+        <p>
+          Academically, I am interested in nuclear non-use, public opinion research, and epistemology in the social sciences more broadly.
+          For my senior thesis, I conducted an online survey experiment evaluating the Indian public's attitudes toward nuclear weapons use.
+          I was awarded the Charles A. Beard Prize for the project, given to the student who writes the best paper in Columbia's political science department.
         </p>
 
         <p>
@@ -135,6 +165,11 @@
           Herman Melville, and Virginia Woolf. Right now, I'm into reading history and political theory, with a focus on liberalism, utilitarianism, and their critics (plus nuclear weapons).
           Please reach out if you know what I should read next!
         </p>
+
+        <div class="fun-fact">
+          <button type="button" class="fact-button" id="fact-button">What's a fun fact about me?</button>
+          <p class="fact" id="fact" aria-live="polite"></p>
+        </div>
 
         <div class="about-links">
           <a href="pdfs/WyattKingCV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
@@ -150,5 +185,38 @@
       <p class="updated"><span class="meta-label">Updated</span><span class="meta-value">November 2026</span></p>
     </footer>
 
+    <script>
+      (function () {
+        var facts = [
+          'I grew up in <a href="https://en.wikipedia.org/wiki/Washington,_Connecticut" target="_blank" rel="noopener noreferrer">the town Gilmore Girls was based on</a>.',
+          "I was almost subpoenaed by the NYPD while reporting on the student protests.",
+          "I can juggle two apples with one hand.",
+          "I can snap without using my thumbs.",
+          'I created a <a href="https://wmk2114.github.io/Crush-Calculator/" target="_blank" rel="noopener noreferrer">Crush Calculator</a> with my friend.'
+        ];
+        var KEY = "wk-fun-fact";
+        var button = document.getElementById("fact-button");
+        var out = document.getElementById("fact");
+
+        function show(i) {
+          out.innerHTML = facts[i];
+          button.hidden = true;
+        }
+
+        // One fun fact per visitor: remember it so a refresh doesn't reroll.
+        var saved = null;
+        try { saved = window.localStorage.getItem(KEY); } catch (e) {}
+        if (saved !== null && facts[Number(saved)]) {
+          show(Number(saved));
+          return;
+        }
+
+        button.addEventListener("click", function () {
+          var i = Math.floor(Math.random() * facts.length);
+          try { window.localStorage.setItem(KEY, String(i)); } catch (e) {}
+          show(i);
+        });
+      })();
+    </script>
   </body>
 </html>
