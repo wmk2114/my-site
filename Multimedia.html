@@ -1,135 +1,136 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC4V03VJMX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SC4V03VJMX');
+    </script>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Multimedia — Wyatt King</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Changa+One:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Spicy+Rice&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/styles2.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #f4f2ea;
+        --text: #1f3a2c;
+        --muted: #6f8176;
+        --line: #d8d8ca;
+        --link: #1f4d36;
+        --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { background: var(--bg); }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--serif);
+        font-size: 1.2rem;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        text-decoration-color: var(--line);
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color 0.2s;
+      }
+      a:hover { text-decoration-color: var(--link); }
+      a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+
+      main {
+        max-width: 68rem;
+        margin: 0 auto;
+        padding: clamp(2rem, 6vh, 4rem) 1.5rem 3rem;
+      }
+      .back { font-size: 1.05rem; }
+      h1 {
+        margin: 1.5rem 0 2.5rem;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 4vw, 1.85rem);
+        line-height: 1.25;
+      }
+
+      .collage { columns: 3; column-gap: 0.75rem; }
+      .collage a { display: block; margin-bottom: 0.75rem; break-inside: avoid; }
+      .collage img { display: block; width: 100%; height: auto; background: var(--line); border-radius: 2px; }
+
+      .videos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 0.75rem;
+        margin-top: 3rem;
+        padding-top: 3rem;
+        border-top: 1px solid var(--line);
+      }
+      .videos video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #14261d; border-radius: 2px; }
+
+      .site-footer {
+        max-width: 68rem;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .site-footer p { margin: 0; }
+
+      @media (max-width: 860px) { .collage { columns: 2; } }
+      @media (max-width: 480px) { .collage { columns: 1; } }
+    </style>
   </head>
   <body>
+    <main>
+      <a class="back" href="index.html">Wyatt King</a>
+      <h1>Multimedia</h1>
 
-    <!-- ── Top nav ── -->
-    <nav class="top-nav">
-      <a href="main.html" class="nav-name">Wyatt King</a>
-      <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="pdfs/WyattKingCV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-        <a href="Multimedia.html">Photography</a>
+      <div class="collage">
+        <a href="images/AAUP_presser_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/AAUP_presser_low_res.jpg" width="5503" height="3669" alt="Speaker addressing a bank of microphones at an outdoor press conference" loading="lazy"></a>
+        <a href="images/Oscar_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/Oscar_low_res.JPG" width="2048" height="1365" alt="Oscar" loading="lazy"></a>
+        <a href="images/Protest1_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/Protest1_low_res.jpg" width="2048" height="1365" alt="Protesters in keffiyehs lit by emergency lights at night" loading="lazy"></a>
+        <a href="images/Oct7Reel.jpg" target="_blank" rel="noopener noreferrer"><img src="images/Oct7Reel.jpg" width="1068" height="1894" alt="Graphic: pro-Israel and pro-Palestinian protesters demonstrated on Oct. 7" loading="lazy"></a>
+        <a href="images/alma_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/alma_low_res.JPG" width="5184" height="3888" alt="Alma Mater statue silhouetted against Low Library at dusk" loading="lazy"></a>
+        <a href="images/MilsteinSweep_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/MilsteinSweep_low_res.jpg" width="6000" height="4000" alt="NYPD officer beside police vehicles with flashing lights" loading="lazy"></a>
+        <a href="images/venice_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/venice_low_res.JPG" width="5305" height="3979" alt="Canal in Venice at golden hour" loading="lazy"></a>
+        <a href="images/KraftCenter_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/KraftCenter_low_res.jpg" width="2048" height="1536" alt="Masked protesters standing near a building entrance at dusk" loading="lazy"></a>
+        <a href="images/nicole_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/nicole_low_res.jpg" width="2048" height="1365" alt="Portrait of Nicole" loading="lazy"></a>
+        <a href="images/SprayProtest.png" target="_blank" rel="noopener noreferrer"><img src="images/SprayProtest.png" width="1538" height="864" alt="Graphic: a pro-Palestinian rally turned site of police investigation" loading="lazy"></a>
+        <a href="images/PoliceButler_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/PoliceButler_low_res.jpg" width="6000" height="4000" alt="Line of NYPD officers outside a university building" loading="lazy"></a>
+        <a href="images/John_kent_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/John_kent_low_res.JPG" width="2039" height="1354" alt="John Kent standing in a wooded ravine" loading="lazy"></a>
+        <a href="images/Protest2_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/Protest2_low_res.jpg" width="6000" height="4000" alt="Police and protesters on a city street" loading="lazy"></a>
+        <a href="images/CPR_Interview.jpg" target="_blank" rel="noopener noreferrer"><img src="images/CPR_Interview.jpg" width="1080" height="1920" alt="Graphic: interview with Mohsen Mahdawi on students' response to crackdowns on speech" loading="lazy"></a>
+        <a href="images/Protest6_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/Protest6_low_res.jpg" width="6000" height="4000" alt="Detained protesters led toward a police van at night" loading="lazy"></a>
+        <a href="images/butler_fish_eye_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/butler_fish_eye_low_res.JPG" width="5184" height="3888" alt="Fisheye view of Columbia's campus at dusk" loading="lazy"></a>
+        <a href="images/Protest3_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/Protest3_low_res.jpg" width="6000" height="4000" alt="Speaker at a press conference surrounded by supporters" loading="lazy"></a>
+        <a href="images/group_low_res.jpeg" target="_blank" rel="noopener noreferrer"><img src="images/group_low_res.jpeg" width="6000" height="3902" alt="Graduates in blue gowns beneath a blossoming tree" loading="lazy"></a>
+        <a href="images/Protest4_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/Protest4_low_res.jpg" width="6000" height="4000" alt="Two police officers in helmets" loading="lazy"></a>
+        <a href="images/MohsenThumbnail.png" target="_blank" rel="noopener noreferrer"><img src="images/MohsenThumbnail.png" width="1800" height="1200" alt="Graphic: CPR Interviews with Mohsen Mahdawi" loading="lazy"></a>
+        <a href="images/Protest7.JPG" target="_blank" rel="noopener noreferrer"><img src="images/Protest7.JPG" width="2048" height="1536" alt="Protester in a keffiyeh near a street vendor truck" loading="lazy"></a>
+        <a href="images/venice2_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/venice2_low_res.jpg" width="2048" height="1364" alt="Gondola on a Venice canal" loading="lazy"></a>
+        <a href="images/ButlerSweep.JPG" target="_blank" rel="noopener noreferrer"><img src="images/ButlerSweep.JPG" width="2227" height="1485" alt="Police outside a university building entrance" loading="lazy"></a>
+        <a href="images/leave_low_res.jpg" target="_blank" rel="noopener noreferrer"><img src="images/leave_low_res.jpg" width="2048" height="1365" alt="Swirling leaves and water in motion" loading="lazy"></a>
+        <a href="images/CongressReport.jpg" target="_blank" rel="noopener noreferrer"><img src="images/CongressReport.jpg" width="1080" height="1920" alt="Graphic: Congress releases report on campus antisemitism" loading="lazy"></a>
+        <a href="images/john_kent_low_res2.jpg" target="_blank" rel="noopener noreferrer"><img src="images/john_kent_low_res2.jpg" width="2048" height="1365" alt="John Kent beside a woodland waterfall" loading="lazy"></a>
+        <a href="images/Milbrook_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/Milbrook_low_res.JPG" width="2037" height="1349" alt="Sunlit woods in Millbrook" loading="lazy"></a>
+        <a href="images/field_low_res.JPG" target="_blank" rel="noopener noreferrer"><img src="images/field_low_res.JPG" width="4000" height="6000" alt="Field at dusk" loading="lazy"></a>
       </div>
-    </nav>
 
-    <!-- ── Page header ── -->
-    <header class="page-header">
-      <h1 class="page-title">Photography</h1>
-    </header>
-
-    <div class="page-wrap">
-
-      <!-- ── Photography ── -->
-      <section class="media-section">
-
-        <div class="photo-grid">
-          <div class="grid-item reveal span-col-2 reveal">
-            <a href="images/John_kent_low_res.JPG">
-              <img src="images/John_kent_low_res.JPG" alt="John Kent" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a href="images/field_low_res.JPG">
-              <img src="images/field_low_res.JPG" alt="Field" loading="lazy">
-            </a>
-          </div>
-
-          <div class="grid-item reveal">
-            <a href="images/leave_low_res.jpg">
-              <img src="images/leave_low_res.jpg" alt="Leaves" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal">
-            <a href="images/Milbrook_low_res.JPG">
-              <img src="images/Milbrook_low_res.JPG" alt="Milbrook" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal">
-            <a href="images/john_kent_low_res2.jpg">
-              <img src="images/john_kent_low_res2.jpg" alt="John Kent" loading="lazy">
-            </a>
-          </div>
-
-          <div class="grid-item reveal span-col-one_half">
-            <a href="images/venice_low_res.jpg">
-              <img src="images/venice_low_res.jpg" alt="Police at Butler" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal span-col-one_half">
-            <a href="images/venice2_low_res.JPG">
-              <img src="images/venice2_low_res.JPG" alt="Venice" loading="lazy">
-            </a>
-          </div>
-
-          <div class="grid-item reveal">
-            <a href="images/Oscar_low_res.JPG">
-              <img src="images/Oscar_low_res.JPG" alt="Oscar" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal">
-            <a href="images/group_low_res.jpeg">
-              <img src="images/group_low_res.jpeg" alt="Group" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal">
-            <a href="images/nicole_low_res.jpg">
-              <img src="images/nicole_low_res.jpg" alt="Nicole" loading="lazy">
-            </a>
-          </div>
-
-          <div class="grid-item reveal span-col-one_half">
-            <a href="images/Protest3_low_res.jpg">
-              <img src="images/Protest3_low_res.jpg" alt="Police at Butler" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal span-col-one_half">
-            <a href="images/AAUP_presser_low_res.jpg">
-              <img src="images/AAUP_presser_low_res.jpg" alt="AAUP Presser" loading="lazy">
-            </a>
-          </div>
-
-          <div class="grid-item reveal span-col-one_half">
-            <a href="images/Protest2_low_res.jpg">
-              <img src="images/Protest2_low_res.jpg" alt="Police at Butler" loading="lazy">
-            </a>
-          </div>
-          <div class="grid-item reveal span-col-one_half">
-            <a href="images/protest6_low_res.jpg">
-              <img src="images/protest6_low_res.jpg" alt="Protest6" loading="lazy">
-            </a>
-          </div>
-
-        </div>
-
-        
-      </section>
-
-    </div>
+      <div class="videos">
+        <video controls preload="none" playsinline poster="images/poster_October7FINAL.jpg" aria-label="Video: October 7"><source src="Video/October7FINAL.mp4" type="video/mp4"></video>
+        <video controls preload="none" playsinline poster="images/poster_Protest1.jpg" aria-label="Video: protest, part 1"><source src="Video/Protest1.mp4" type="video/mp4"></video>
+        <video controls preload="none" playsinline poster="images/poster_Protest2.jpg" aria-label="Video: protest, part 2"><source src="Video/Protest2.mp4" type="video/mp4"></video>
+        <video controls preload="none" playsinline poster="images/poster_Protest3.jpg" aria-label="Video: protest, part 3"><source src="Video/Protest3.mp4" type="video/mp4"></video>
+        <video controls preload="none" playsinline poster="images/poster_Protest4.jpg" aria-label="Video: protest, part 4"><source src="Video/Protest4.mp4" type="video/mp4"></video>
+      </div>
+    </main>
 
     <footer class="site-footer">
-      <p>© 2026 Wyatt King · <a href="https://www.linkedin.com/in/wyatt-king-790955263/">LinkedIn</a></p>
+      <p>© 2026 Wyatt King</p>
     </footer>
-
-    <script>
-      const revealEls = document.querySelectorAll('.reveal');
-      function checkReveal() {
-        const trigger = window.innerHeight * 0.92;
-        revealEls.forEach(el => {
-          if (el.getBoundingClientRect().top < trigger) el.classList.add('visible');
-        });
-      }
-      window.addEventListener('scroll', checkReveal);
-      window.addEventListener('load', checkReveal);
-    </script>
   </body>
 </html>
