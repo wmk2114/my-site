@@ -73,14 +73,33 @@
         outline-offset: 6px;
         border-radius: 2px;
       }
+
+      /* Page-exit veil: fades to the same cream index.html uses, so the
+         handoff between the two pages has no hard cut. */
+      .page-veil {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background: var(--paper);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      body.is-leaving .page-veil { opacity: 1; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .page-veil { transition: none; }
+      }
     </style>
   </head>
 
   <body>
-    <video id="fullscreenVideo" autoplay muted loop playsinline>
+    <video id="fullscreenVideo" autoplay muted loop playsinline preload="auto" poster="Video/poster.jpg">
       <source src="Video/Website.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+
+    <div class="page-veil" aria-hidden="true"></div>
 
     <div class="overlay-text">
       <span>Hi! I'm Wyatt. Check out more about me
@@ -89,10 +108,31 @@
     </div>
 
     <script>
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
       // Respect reduced-motion settings: hold the first frame instead of looping.
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (reduceMotion) {
         var v = document.getElementById("fullscreenVideo"); v.removeAttribute("autoplay"); v.pause();
       }
+
+      // Soft exit: fade to cream, then navigate to index.html.
+      (function () {
+        var link = document.querySelector('.overlay-text a[href="index.html"]');
+        if (!link || reduceMotion) return;
+
+        link.addEventListener("click", function (e) {
+          // Leave new-tab / modified clicks alone.
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+          document.body.classList.add("is-leaving");
+          setTimeout(function () { window.location.href = link.href; }, 800);
+        });
+
+        // If the visitor comes back with the Back button (bfcache), undo the fade.
+        window.addEventListener("pageshow", function (e) {
+          if (e.persisted) document.body.classList.remove("is-leaving");
+        });
+      })();
     </script>
   </body>
 </html>
